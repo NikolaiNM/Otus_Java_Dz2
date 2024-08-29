@@ -1,4 +1,4 @@
-package Animals;
+package animals;
 
 public class Animal {
 
@@ -87,5 +87,4 @@ public class Animal {
             return "лет";
         }
     }
-
 }

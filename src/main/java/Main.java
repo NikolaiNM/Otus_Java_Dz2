@@ -1,7 +1,7 @@
-import Animals.Animal;
-import Animals.Cat;
-import Animals.Dog;
-import Animals.Duck;
+import animals.Animal;
+import animals.Cat;
+import animals.Dog;
+import animals.Duck;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -13,7 +13,7 @@ public class Main {
         // создаем сканер
         Scanner scanner = new Scanner(System.in);
 
-        List<Animal> Animals = new ArrayList<>(); // Создаем коллекцию - список Animals ArrayList
+        List<Animal> animals = new ArrayList<>(); // Создаем коллекцию - список Animals ArrayList
 
         // создаем переменную флаг - для выхода
         boolean exit = false;
@@ -99,17 +99,17 @@ public class Main {
                             continue;
                     }
 
-                    Animals.add(newAnimal);
+                    animals.add(newAnimal);
                     newAnimal.say();
                     System.out.print("Вводи команду Add / List / Exit : ");
                     break;
 
                 case LIST:                                   //если ввели LIST
-                    if (Animals.isEmpty()) {
+                    if (animals.isEmpty()) {
                         System.out.print("Список пуст, добавьте животное Add / Exit : ");
                     } else {
-                        for (int i = 0; i < Animals.size(); i++) {
-                            System.out.println(Animals.get(i).toString());
+                        for (int i = 0; i < animals.size(); i++) {
+                            System.out.println(animals.get(i).toString());
                         }
                         System.out.print("Вводи команду Add / List / Exit : ");
                     }
@@ -119,6 +119,7 @@ public class Main {
                     System.out.println("Выход");
                     exit = true;
                     break;
+                    //System.exit(0);
                 default:                                  // любое другое значение
                     System.out.println("Не верная комманда");
             }

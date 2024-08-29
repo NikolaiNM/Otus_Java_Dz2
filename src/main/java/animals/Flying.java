@@ -1,4 +1,4 @@
-package Animals;
+package animals;
 
 public interface Flying {
 

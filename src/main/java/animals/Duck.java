@@ -1,4 +1,4 @@
-package Animals;
+package animals;
 
 public class Duck extends Animal implements Flying {
     // конструктор

@@ -1,4 +1,4 @@
-package Animals;
+package animals;
 
 public class Cat extends Animal {
     // конструктор
