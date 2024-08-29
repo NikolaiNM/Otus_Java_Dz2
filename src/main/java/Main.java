@@ -117,9 +117,7 @@ public class Main {
 
                 case EXIT:                                  //если ввели EXIT
                     System.out.println("Выход");
-                    exit = true;
-                    break;
-                    //System.exit(0);
+                    System.exit(0);                 // правильный выход
                 default:                                  // любое другое значение
                     System.out.println("Не верная комманда");
             }
