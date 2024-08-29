@@ -104,7 +104,7 @@ public class Main {
                     System.out.print("Вводи команду Add / List / Exit : ");
                     break;
 
-                case LIST:                                  //если ввели LIST
+                case LIST:                                   //если ввели LIST
                     if (animals.isEmpty()) {
                         System.out.print("Список пуст, добавьте животное Add / Exit : ");
                     } else {
