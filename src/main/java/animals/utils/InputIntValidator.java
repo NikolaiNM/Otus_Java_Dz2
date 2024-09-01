@@ -21,7 +21,7 @@ public class InputIntValidator {
                 if (value >= min && value <= max) {
                     isValid = true;
                 }  else {
-                    System.out.println(paramMast + " быть в диапозоне от " + min + " до " + max );
+                    System.out.println(paramMast + " быть в диапазоне от " + min + " до " + max );
                 }
             }catch (InputMismatchException e) {
                 System.out.println("Вводите только цифры!");
