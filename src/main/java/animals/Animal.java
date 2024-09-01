@@ -1,6 +1,6 @@
 package animals;
 
-public class Animal {
+public abstract class Animal {
 
     // поля свойства
     private String name;

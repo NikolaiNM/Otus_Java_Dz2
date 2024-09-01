@@ -1,7 +1,8 @@
 import animals.Animal;
-import animals.Cat;
-import animals.Dog;
-import animals.Duck;
+import animals.pets.Cat;
+import animals.pets.Dog;
+import animals.birds.Duck;
+import animals.utils.InputIntValidator;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -12,6 +13,8 @@ public class Main {
     public static void main(String[] args) {
         // создаем сканер
         Scanner scanner = new Scanner(System.in);
+
+        InputIntValidator validator = new InputIntValidator(scanner);
 
         List<Animal> animals = new ArrayList<>(); // Создаем коллекцию - список Animals ArrayList
 
@@ -49,34 +52,10 @@ public class Main {
 
 
                     System.out.println("Как зовут животное?");
-                    String name = scanner.nextLine().trim();      // вводим имя животного, оттбрасываем пробелы
+                    String name = scanner.nextLine().trim();      // вводим имя животного, отбрасываем пробелы
 
-                    int age = 0;
-                    boolean rightAge = false;
-                    do {
-                        System.out.println("Сколько ему лет?");
-                        try {
-                            age = scanner.nextInt();
-                            rightAge = true;
-                        } catch (InputMismatchException e) {
-                            System.out.println("Вводите только цифры!");
-                            scanner.nextLine();
-                        }
-                    } while (!rightAge);
-
-                    int weight = 0;
-                    boolean rightWeight = false;
-                    do {
-                        System.out.println("Сколько оно весит?");
-                        try {
-                            weight = scanner.nextInt();
-                            rightWeight = true;
-                        } catch (InputMismatchException e) {
-                            System.out.println("Вводите только цифры!");
-                            scanner.nextLine();
-                        }
-                    } while (!rightWeight);
-                    scanner.nextLine(); // !!!ПРОСТО ВЫНОС МОЗГА!!! scanner.nextInt() не очищается оставшийся символ новой строки
+                    int age = validator.getValidInput("Сколько ему лет?", "Возраст должен",1, 20);
+                    int weight = validator.getValidInput("Сколько оно весит?","Вес должен", 1, 100);
 
                     System.out.println("Какого цвета животное?");
                     String color = scanner.nextLine().trim().toUpperCase();     // вводим цвет животного, оттбрасываем пробелы
@@ -104,7 +83,8 @@ public class Main {
                     System.out.print("Вводи команду Add / List / Exit : ");
                     break;
 
-                case LIST:                                            //если ввели LIST
+                case LIST:
+                    //если ввели LIST
                     if (animals.isEmpty()) {
                         System.out.print("Список пуст, добавьте животное Add / Exit : ");
                     } else {
