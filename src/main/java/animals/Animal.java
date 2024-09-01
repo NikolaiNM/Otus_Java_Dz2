@@ -73,7 +73,7 @@ public abstract class Animal {
     // метод приветМалыш
     @Override
     public String toString() {
-        return "Привет! меня зовут " + name + ", мне " + age + " " + correctAgeStr(age) + ", я вешу - " + weight + " кг, мой цвет - " + color;
+        return "Привет! Меня зовут " + name + ", мне " + age + " " + correctAgeStr(age) + ", я вешу - " + weight + " кг, мой цвет - " + color;
     }
 
     private String correctAgeStr(int age) {
