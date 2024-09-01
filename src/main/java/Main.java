@@ -2,6 +2,7 @@ import animals.Animal;
 import animals.pets.Cat;
 import animals.pets.Dog;
 import animals.birds.Duck;
+import menu.Command;
 import utils.InputIntValidator;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,9 +25,8 @@ public class Main {
         // цикл пока exit == false
         while (!exit) {
 
-
             String input = scanner.nextLine();                  // Запись в input из терминала
-            Command command = Command.fromString(input);        // Обьясвление переменнной command для Command(enum)
+            Command command = Command.fromString(input);        // Обьясвление переменнной command для menu.Command(enum)
 
             // Проверка если ввели пустую команду
             if (command == null) {                               // Проверяет чтобы в команде не был нулл
