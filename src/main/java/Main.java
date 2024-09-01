@@ -2,9 +2,8 @@ import animals.Animal;
 import animals.pets.Cat;
 import animals.pets.Dog;
 import animals.birds.Duck;
-import animals.utils.InputIntValidator;
+import utils.InputIntValidator;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
