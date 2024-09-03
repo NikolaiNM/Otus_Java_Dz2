@@ -18,12 +18,12 @@ public class Main {
         List<Animal> animals = new ArrayList<>(); // Создаем коллекцию - список Animals ArrayList
 
         // создаем переменную флаг - для выхода
-        boolean exit = false;
+        //boolean exit = false;
 
         System.out.print("Привет! Вводи команду Add / List / Exit : ");       // Приветствие
 
         // цикл пока exit == false
-        while (!exit) {
+        while (true) {
 
             String input = scanner.nextLine();                  // Запись в input из терминала
             Command command = Command.fromString(input);        // Обьясвление переменнной command для menu.Command(enum)
@@ -95,13 +95,14 @@ public class Main {
 
                 case EXIT:                                  //если ввели EXIT
                     System.out.println("Выход");
+                    // закрыть сканер
+                    scanner.close();
                     System.exit(0);                 // правильный выход
                 default:                                  // любое другое значение
                     System.out.println("Не верная комманда");
             }
         }
 
-        // закрыть сканер
-        scanner.close();
+
     }
 }
